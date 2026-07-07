@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Vision Simulator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="bg-blur blur1"></div>
+    <div class="bg-blur blur2"></div>
+
+    <div class="container">
+
+        <!-- Hero -->
+        <section class="hero glass">
+
+            <h1>Color Vision Simulator</h1>
+
+            <p>
+                Experience how individuals with color vision deficiencies
+                perceive digital content and imagery.
+            </p>
+
+        </section>
+
+        <!-- Upload Section -->
+        <section class="upload-card glass">
+
+            <label for="imageUpload" class="upload-zone">
+
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                <h2>Upload Image</h2>
+
+                <p>
+                    Drag & Drop or Click to Browse
+                </p>
+
+                <input
+                    type="file"
+                    id="imageUpload"
+                    accept="image/*"
+                    hidden>
+
+            </label>
+
+        </section>
+
+        <!-- Stats -->
+        <section class="stats">
+
+            <div class="stat-card glass">
+                <span>Width</span>
+                <h3 id="imgWidth">-</h3>
+            </div>
+
+            <div class="stat-card glass">
+                <span>Height</span>
+                <h3 id="imgHeight">-</h3>
+            </div>
+
+            <div class="stat-card glass">
+                <span>Size</span>
+                <h3 id="imgSize">-</h3>
+            </div>
+
+        </section>
+
+        <!-- Filters -->
+        <section class="filter-section">
+
+            <button class="filter-btn active" data-filter="normal">
+                Original
+            </button>
+
+            <button class="filter-btn" data-filter="protanopia">
+                Protanopia
+            </button>
+
+            <button class="filter-btn" data-filter="deuteranopia">
+                Deuteranopia
+            </button>
+
+            <button class="filter-btn" data-filter="tritanopia">
+                Tritanopia
+            </button>
+
+            <button class="filter-btn" data-filter="achromatopsia">
+                Achromatopsia
+            </button>
+
+        </section>
+
+        <!-- Image Comparison -->
+        <section class="comparison">
+
+            <div class="preview-card glass">
+
+                <h2>Original Image</h2>
+
+                <canvas id="originalCanvas"></canvas>
+
+            </div>
+
+            <div class="preview-card glass">
+
+                <h2>Simulated Vision</h2>
+
+                <canvas id="simulatedCanvas"></canvas>
+
+            </div>
+
+        </section>
+
+        <!-- Download -->
+        <div class="download-container">
+
+            <button id="downloadBtn">
+
+                <i class="fa-solid fa-download"></i>
+
+                Download Image
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
